@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OttoPy Output Runner</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="runner_body">
+    <button onclick="play()"> Play </button>
+  </div>
+  <script src="runner.js"></script>
+  <script> 
+  let steps = []
+  function play(){
+    steps.map(s => runner._js_call(s))
+  } 
+  </script>
+
+
+</body>
+</html>
