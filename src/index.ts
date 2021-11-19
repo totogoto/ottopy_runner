@@ -8,7 +8,8 @@ const ALLOWED_METHOD = ["halt", "draw_all"];
 
 declare global {
 	interface Window {
-		runner: OttopyRunner;
+		Runner: any;
+		$:any;
 	}
 }
 
@@ -130,7 +131,8 @@ class OttopyRunner {
 				this.world_model.robots[0] &&
 				this.world_model.robots[0].node
 			);
-		}, 3000);
+		}, 5000);
+		// return Promise.resolve("done")
 	};
 
 	sleepUntil = (f: Function, timeoutMs: number) => {
@@ -251,4 +253,5 @@ class OttopyRunner {
 	}
 }
 
-window.runner = new OttopyRunner();
+window.Runner =  OttopyRunner;
+window.$ = $;
